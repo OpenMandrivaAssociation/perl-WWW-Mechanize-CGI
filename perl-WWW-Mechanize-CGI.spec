@@ -16,6 +16,7 @@ BuildRequires: perl(HTTP::Request::AsCGI)
 BuildRequires: perl(IO::Pipe)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(WWW::Mechanize)
+BuildRequires: perl(Class::Accessor::Fast)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
