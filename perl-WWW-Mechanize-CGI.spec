@@ -7,7 +7,7 @@ Version:    %{version}
 Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
-Summary:    Use WWW::Mechanize with CGI applications.
+Summary:    Use WWW::Mechanize with CGI applications
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/WWW/%{module}-%{version}.tar.gz
 BuildRequires: perl(Carp)
