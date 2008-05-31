@@ -1,6 +1,6 @@
 %define module   WWW-Mechanize-CGI
 %define version    0.3
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{module}
 Version:    %{version}
@@ -17,6 +17,7 @@ BuildRequires: perl(IO::Pipe)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(WWW::Mechanize)
 BuildRequires: perl(Class::Accessor::Fast)
+Requires: perl(Class::Accessor::Fast)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
