@@ -22,8 +22,8 @@ BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
-Provides a convenient way of using CGI applications with the WWW::Mechanize
-manpage.
+Provides a convenient way of using CGI applications with the WWW::Mechanize, 
+without setting a webrowser.
 
 %prep
 %setup -q -n %{module}-%{version} 
