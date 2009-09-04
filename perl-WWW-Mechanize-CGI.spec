@@ -1,6 +1,6 @@
 %define module   WWW-Mechanize-CGI
 %define version    0.3
-%define release    %mkrel 3
+%define release    %mkrel 4
 
 Name:       perl-%{module}
 Version:    %{version}
