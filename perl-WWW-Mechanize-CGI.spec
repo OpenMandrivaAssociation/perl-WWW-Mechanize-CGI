@@ -1,39 +1,42 @@
-%define module   WWW-Mechanize-CGI
-%define version    0.3
-%define release    %mkrel 4
+%define upstream_name    WWW-Mechanize-CGI
+%define upstream_version 0.3
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Use WWW::Mechanize with CGI applications
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/WWW/%{module}-%{version}.tar.gz
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Carp)
+BuildRequires: perl(Class::Accessor::Fast)
 BuildRequires: perl(File::Spec)
 BuildRequires: perl(HTTP::Request::AsCGI)
 BuildRequires: perl(IO::Pipe)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(WWW::Mechanize)
-BuildRequires: perl(Class::Accessor::Fast)
+
+BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+
 Requires: perl(Class::Accessor::Fast)
-BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 Provides a convenient way of using CGI applications with the WWW::Mechanize, 
 without setting a webrowser.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %{buildroot}
@@ -47,4 +50,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/WWW
-
