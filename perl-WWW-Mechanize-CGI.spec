@@ -2,14 +2,14 @@
 %define upstream_version 0.3
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	Use WWW::Mechanize with CGI applications
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/WWW-Mechanize-CGI
+Source0:	https://cpan.metacpan.org/authors/id/M/MR/MRAMBERG/WWW-Mechanize-CGI-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
