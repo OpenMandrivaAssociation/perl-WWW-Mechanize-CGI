@@ -1,15 +1,13 @@
 %define upstream_name    WWW-Mechanize-CGI
-%define upstream_version 0.3
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.3
+Release:	6
 
 Summary:	Use WWW::Mechanize with CGI applications
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/WWW-Mechanize-CGI
-Source0:	https://cpan.metacpan.org/authors/id/M/MR/MRAMBERG/WWW-Mechanize-CGI-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MR/MRAMBERG/WWW-Mechanize-CGI-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -29,7 +27,7 @@ Provides a convenient way of using CGI applications with the WWW::Mechanize,
 without setting a webrowser.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -49,9 +47,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %changelog
 * Sat Feb 13 2010 Jérôme Quelin <jquelin@mandriva.org> 0.300.0-1mdv2010.1
 + Revision: 505369
-- rebuild using %%perl_convert_version
-
-* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.3-4mdv2010.0
+- rebuild using %0.3 Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.3-4mdv2010.0
 + Revision: 430656
 - rebuild
 
