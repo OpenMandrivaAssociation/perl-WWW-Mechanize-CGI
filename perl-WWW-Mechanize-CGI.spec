@@ -2,7 +2,7 @@
 %define upstream_version 0.3
 Name:		perl-%{upstream_name}
 Version:	0.3
-Release:	4
+Release:	5
 
 Summary:	Use WWW::Mechanize with CGI applications
 License:	GPL+ or Artistic
