@@ -2,7 +2,7 @@
 %define upstream_version 0.3
 Name:		perl-%{upstream_name}
 Version:	0.3
-Release:	12
+Release:	1
 
 Summary:	Use WWW::Mechanize with CGI applications
 License:	GPL+ or Artistic
@@ -32,18 +32,18 @@ without setting a webrowser.
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
-
+%make_build
 %check
 # soft: do not fail package on test failures
 set +e
+make test || :
 %make test || :
 
 %install
 %makeinstall_std
 
 %files
-%doc Changes README
+%doc Changes META.yml README
 %{_mandir}/man3/*
 %{perl_vendorlib}/WWW
 
